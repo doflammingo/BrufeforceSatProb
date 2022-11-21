@@ -1,5 +1,8 @@
 
 class Assignment:
+    """
+    A class used to represent the assignments of the formula
+    """
     boolComb = []
     # Intialize the first assignement of booleans to false
     def __init__(self,length):
