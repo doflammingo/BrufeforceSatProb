@@ -16,7 +16,8 @@ class Clause:
 
     def addLiteral(self,clause,literal):
         """Adds literals to a clause
-
+        It adds a literal to the given clause, if it contains that literal
+        already, it will do nothing
         Parameters
         ----------
         :param clause: list
@@ -26,6 +27,8 @@ class Clause:
         :return: clause
             returns the clause with the literal
         """
-        clause.append(literal)
-        return clause
-    # addliteral funktion, etc.
+        if clause.count(literal):
+            return clause
+        else:
+            clause.append(literal)
+            return clause

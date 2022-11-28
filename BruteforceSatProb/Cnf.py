@@ -9,11 +9,11 @@ class Cnf:
             The formula
         """
         self.formula = formula
-        #eval funktion implementieren
 
     def eval(self,currentAssignment):
         """Evaluates the formula with the current Assignments of variables
-
+        It evaluates each clause with the current assigned Assignments and saves the temporary result
+        before evaluating all results from each clause together
         Parameters
         ----------
         :param currentAssignment: int Array
@@ -53,25 +53,5 @@ class Cnf:
             else:
                 endResult = endResult and x
         return endResult
-
-    def nextAssignment(self,currentAssignment):
-        """Assigns the next Assignment for the variables
-
-        Parameters
-        ----------
-        :param currentAssignment: list
-            The current assignment of the variables
-        :return: currentAssignment
-            returns the current Assignment
-        """
-        for num,x in enumerate(currentAssignment):
-            if x == 0:
-                currentAssignment[num] = 1
-                return currentAssignment
-            elif x==1:
-                currentAssignment[num] = 0
-                continue
-            else:
-                continue
 
 
