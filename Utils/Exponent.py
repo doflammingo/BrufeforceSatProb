@@ -4,6 +4,8 @@ class Exponent:
     """
     def exponent(self,x,y):
         """ For a number x it takes to the power y
+        Parameters
+        ----------
         :param x: int
             Basis
         :param y: int
@@ -11,7 +13,7 @@ class Exponent:
         :return: int
             result x power y
         """
-        end=x
+        result=x
         for m in range(1,y):
-            end=end*x
-        return end
+            result=result*x
+        return result
